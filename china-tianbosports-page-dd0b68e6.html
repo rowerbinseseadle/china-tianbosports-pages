@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天博体育 · 资料索引与知识库</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f6f3;
+      font-family: "Noto Serif SC", "Georgia", "Times New Roman", serif;
+      color: #2c2b28;
+      line-height: 1.7;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fefcf9;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03);
+      padding: 3rem 2.5rem;
+      border-radius: 2px;
+    }
+
+    /* 目录式标题 */
+    .section-marker {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9a8a7a;
+      border-bottom: 1px solid #e1d9cf;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.8rem;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 2.6rem;
+      letter-spacing: 0.02em;
+      color: #1e1c19;
+      margin-bottom: 0.3rem;
+      line-height: 1.3;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7a6e5f;
+      border-left: 3px solid #d7ccc0;
+      padding-left: 1rem;
+      margin-bottom: 2.8rem;
+      font-style: normal;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #3d3730;
+      margin: 2.2rem 0 1rem;
+      border-bottom: 1px dashed #e3dbd0;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: #4f463d;
+      margin: 1.7rem 0 0.6rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    a {
+      color: #7f5f42;
+      text-decoration: none;
+      border-bottom: 1px dotted #c8b9a7;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #4a3c2e;
+      border-bottom-color: #4a3c2e;
+    }
+
+    /* 引用 / 提示框风格 */
+    blockquote, .info-box, .note-box, .faq-preview {
+      background-color: #f3efe9;
+      border-left: 5px solid #cfc0ae;
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      font-size: 0.95rem;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .info-box {
+      border-left-color: #b4a392;
+    }
+
+    .note-box {
+      background-color: #efeae3;
+      border-left: 5px solid #b29f89;
+    }
+
+    .faq-preview {
+      background-color: #f6f2ec;
+      border-left-color: #d0bfac;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .faq-item {
+      padding: 0.2rem 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #3f372f;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .faq-a {
+      color: #5d5348;
+      margin-left: 0.6rem;
+    }
+
+    .directory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+      margin: 1.2rem 0 1.8rem;
+    }
+
+    .dir-item {
+      padding: 0.6rem 0 0.6rem 1.2rem;
+      border-left: 2px solid #dad1c4;
+      font-size: 0.95rem;
+    }
+
+    .dir-item strong {
+      font-weight: 500;
+      color: #4f4439;
+    }
+
+    .scene-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .scene-list li {
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      position: relative;
+      margin-bottom: 0.2rem;
+    }
+
+    .scene-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b2a18b;
+    }
+
+    .footnote {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5ddd2;
+      font-size: 0.85rem;
+      color: #7b6f60;
+      text-align: right;
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .directory-grid {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+
+      body {
+        padding: 1rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="section-marker">资料索引 · 知识库</div>
+  <h1>天博体育</h1>
+  <div class="subhead">信息整理 · 结构目录 · 参考提示</div>
+
+  <!-- 介绍区：定位与资料性质 -->
+  <p>本篇介绍页以文献索引与信息整理为出发点，系统梳理关于 <a href="https://china-tianbosports.com">天博体育</a> 的关键资料模块、常见查询方向以及背景提示，供需要快速了解或进行信息检索的使用者参考。所有内容均基于公开可查的信息来源，不做主观评价，仅作结构化的知识汇总。</p>
+
+  <div class="info-box">
+    <strong>▎使用指引</strong><br>
+    下文分为「资料模块概览」「常见场景与查询方向」「提示与说明」「FAQ 摘要」四个区段。每个区段均可作为独立索引入口，方便直接定位所需信息。
+  </div>
+
+  <!-- 目录感布局：资料模块卡片网格 -->
+  <h2>一、资料模块概览</h2>
+  <div class="directory-grid">
+    <div class="dir-item"><strong>· 平台背景与定位</strong><br>简要介绍、服务范围、主要领域</div>
+    <div class="dir-item"><strong>· 内容与资源结构</strong><br>信息分类方式、常见资料类型</div>
+    <div class="dir-item"><strong>· 使用与体验要点</strong><br>界面逻辑、功能模块、辅助说明</div>
+    <div class="dir-item"><strong>· 相关参考与延伸</strong><br>关联信息、行业背景、注意事项</div>
+  </div>
+  <p>以上四个模块覆盖了从基础认知到细节查阅的主要维度。每个模块内部可进一步按关键词或子主题细分，适合作为进一步检索的提纲。</p>
+
+  <!-- 说明区：特点与信息结构 -->
+  <h2>二、常见场景与查询方向</h2>
+  <p>以下列举若干典型的信息检索场景，帮助使用者快速定位所需内容：</p>
+  <ul class="scene-list">
+    <li><strong>资料整理场景</strong> — 希望系统了解平台各项信息，按模块分类查阅。</li>
+    <li><strong>功能理解场景</strong> — 关注具体操作方式、界面布局或资源获取流程。</li>
+    <li><strong>比较参考场景</strong> — 需要结合不同来源的信息进行对照与核实。</li>
+    <li><strong>背景调研场景</strong> — 从行业、政策或发展角度梳理相关框架。</li>
+  </ul>
+  <p>在不同场景下，推荐优先查阅对应的模块。例如功能理解场景可重点关注「使用与体验要点」模块；背景调研场景则可结合「平台背景与定位」以及「相关参考与延伸」两部分。</p>
+
+  <!-- 提示区：引用块风格 -->
+  <h2>三、提示与说明</h2>
+  <div class="note-box">
+    <p><strong>信息核实提示</strong>：本页所引用的内容均基于公开渠道整理，仅作为索引框架与资料入口。建议在引用或作出判断前，直接访问 <a href="https://china-tianbosports.com">天博体育</a> 获取最新、最准确的官方信息。</p>
+  </div>
+  <div class="note-box">
+    <p><strong>检索逻辑建议</strong>：使用关键词组合检索效率更高，例如将“天博体育”与具体模块名称（如“平台背景”“资源分类”）搭配使用。也可利用站点内搜索功能直接定位。</p>
+  </div>
+  <blockquote>
+    “资料的整理与索引本身即是知识的一部分。清晰的目录结构能够大幅降低信息获取的门槛。” —— 此为信息管理中的常见观点，可作为本页的方法论参考。
+  </blockquote>
+
+  <!-- 相关信息区：FAQ 摘要 -->
+  <h2>四、FAQ 摘要</h2>
+  <div class="faq-preview">
+    <div class="faq-item">
+      <span class="faq-q">Q：如何快速了解天博体育的核心资料？</span>
+      <span class="faq-a">建议从「资料模块概览」部分入手，根据目录指引选择感兴趣的方向，再逐步深入。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">Q：本页的信息是否实时更新？</span>
+      <span class="faq-a">本页为静态索引页，不保证实时同步。获取第一手资料请直接访问 <a href="https://china-tianbosports.com">天博体育</a>。</span>
+    </div>
+    <div class="faq-item">
+      <span class="faq-q">Q：还有其他资料整理方式吗？</span>
+      <span class="faq-a">可以结合标签分类、时间线整理或专题汇总等多种方法，根据自身需求选择最合适的结构。</span>
+    </div>
+  </div>
+  <p style="font-size:0.9rem; color:#6e6255;">以上 FAQ 内容仅作示例，实际查询时建议参考具体信息源。</p>
+
+  <!-- 结尾 -->
+  <div class="footnote">
+    <span>资料索引页 · 仅供信息整理参考</span>
+  </div>
+
+</div>
+</body>
+</html>
